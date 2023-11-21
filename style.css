@@ -1,0 +1,297 @@
+/* background video */
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url(image/backg3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+#video-container {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.video-container video {
+    width: 100%;
+    height: auto; /* ควบคุมความสูงโดยให้รักษาสัดส่วน */
+  }
+
+#video-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    
+    
+}
+
+
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-90%, -90%);
+    text-align: left;
+    color: white;
+    white-space: nowrap;
+    font-size: large;
+    font-family: 'Roboto', Arial, sans-serif;
+    
+    
+    
+}
+.content1 {
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.my-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white; /* สีข้อความ */
+    padding: 10px 80px; /* ขนาดขอบของปุ่ม */
+    border: 2px solid rgb(255, 255, 255); /* ลบเส้นขอบ */
+    border-radius: 50px; /* มุมขอบโค้ง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปแบบที่เรียบง่าย */
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    margin: 15px;
+    
+}
+
+/* สไตล์เมื่อนำเมาส์ Hover หรือ Focus ปุ่ม */
+.my-button:hover, .my-button:focus {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #ffffff; /* เมื่อนำเมาส์ Hover หรือ Focus */
+    color: #000;
+}
+
+
+
+  
+  /* รูปแบบ Navbar */
+.navbar {
+    overflow: calc(100% - 90);
+    color: rgb(0, 0, 0);
+    position: fixed; /* ติดอยู่ด้านบน */
+    top: 0; /* ตำแหน่งด้านบนของหน้าจอ */
+    width: 100%; /* ความกว้างเต็มหน้าจอ */
+    z-index: 100; /* กำหนดลำดับความสูงให้มากกว่าวีดีโอ */
+    left: 250px; 
+    padding: 10px 80px;
+    flex-wrap: nowrap;
+    
+   
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-logo img{   
+    height: 60px;
+    position: relative; /* เพิ่มความสำคัญสำหรับการจัดการข้อความ */
+    z-index: 1; 
+    right: 60px;
+    
+}
+
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left; 
+    transform: translateY(-150%);
+    
+}
+
+.navbar-links li {
+    margin: 0 50px;
+}
+
+.navbar-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-links .search-icon {
+    color: white;
+    font-size: 25px;
+    margin-left: 350px;
+    cursor: pointer;
+    
+}
+.navbar-links .icon{
+    color: rgb(255, 255, 255);
+    font-size: 25px; /* ขนาดของไอคอน */
+    margin-left: 40px; /* ระยะห่างของไอคอนกับข้อความ */
+    cursor: pointer;
+}
+
+.navbar a::after {
+    content: "";
+    position: fixed;
+    bottom: -30px;
+    left: -100px;
+    right: 0;
+    height: 1px; /* ความสูงของเส้นขีด */
+    background-color: white;
+    width: 70%;
+}
+.navbar a:hover {
+    background-color: #2f17b800;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #0070c0;
+    z-index: 2;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    right: -100px;
+    top: 55px;
+    min-width: 350px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    display: inline-block;
+    
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#login {
+    color: rgb(255, 255, 255);
+    font-size: 30px; /* ขนาดของไอคอน */
+    margin-left: 0; /* ระยะห่างของไอคอนกับข้อความ */
+    cursor: pointer;
+}
+#shop{
+    color: rgb(255, 255, 255);
+    font-size: 30px; /* ขนาดของไอคอน */
+    margin-left: 0; /* ระยะห่างของไอคอนกับข้อความ */
+    cursor: pointer;
+
+}
+#location{
+    color: rgb(255, 255, 255);
+    font-size: 30px; /* ขนาดของไอคอน */
+    margin-left: 0; /* ระยะห่างของไอคอนกับข้อความ */
+    cursor: pointer;
+
+}
+
+
+
+.boby {
+    display: flex;
+    padding: 0 100px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.weapper{
+    max-width: 2000px;
+    position: relative;
+}
+
+.weapper .carousel{
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.carousel img{
+    border-radius: 20px;
+    height: 650px;
+    object-fit: cover;
+    margin-left: 100px;
+    width: calc(100% / 1.25);
+    vertical-align: top;
+
+}
+.carousel img:first-child{
+    margin-left: 100px;
+}
+.carousel-slide {
+    position: relative;
+    display: inline-block; /* กำหนดให้แต่ละสไลด์อยู่ในบรรทัดเดียวกัน */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 45px; /* ปรับตำแหน่งข้อความลงให้เหมาะกับรูปภาพ */
+    left: 100px; /* ปรับตำแหน่งข้อความลงให้เหมาะกับรูปภาพ */
+    background: rgba(0, 0, 0, 0); /* สีพื้นหลังของข้อความ */
+    color: white; /* สีข้อความ */
+    font-family: 'Roboto', Arial, sans-serif;
+    
+    
+}
+.carousel-caption p{
+    font-size: 15px;
+    padding: 0 20px;
+    
+}
+.carousel-caption h3{
+    font-size: 25px;
+    padding: 0 20px;
+    
+}
+.carousel-caption .icon{
+    color: rgb(161, 161, 161);
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 300px;
+}
+.carousel-caption .icon:hover {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel img{
+        width: calc(100% / 3);
+    }
+    
+}
+@media screen and (max-width: 1200px) {
+    .carousel img{
+        width: 100%;
+    }
+    
+}
+
+
+
